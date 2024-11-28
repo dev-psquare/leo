@@ -1,14 +1,26 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
+
+  const navigation = useNavigation();
+  console.log('home');
   return (
-    <View>
-      <Text>Home</Text>
+    <View
+      style={{
+        height: '100%',
+        width: '100%',
+      }}>
+      <TouchableOpacity onPress={() => {
+        navigation.navigate('Details')
+      }}>
+        <Text style={{color: 'black', fontSize: 30}}>Details</Text>
+      </TouchableOpacity>
     </View>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

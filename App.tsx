@@ -8,7 +8,7 @@ type Props = {}
 const App = (props: Props) => {
   return (
     <NavigationContainer>
-      <SafeAreaView>
+      <SafeAreaView style={{flex:1, backgroundColor:"white"}}>
         <AppNavigator/>
       </SafeAreaView>
     </NavigationContainer>
